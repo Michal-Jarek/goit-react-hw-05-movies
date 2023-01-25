@@ -21,10 +21,10 @@ export const SharedLayout = () => (
         </nav>
       </div>
     </header>
-    <body>
+    <main>
       <div className={scss.container}>
         <Outlet />
       </div>
-    </body>
+    </main>
   </>
 );

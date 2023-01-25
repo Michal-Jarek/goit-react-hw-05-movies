@@ -1,2 +1,8 @@
+import { Outlet } from "react-router-dom";
 
-export const SharedLayout = () => <nav>navigacja</nav>;
+export const SharedLayout = () => (
+  <>
+        <nav>navigacja</nav>
+        <Outlet />
+  </>
+);

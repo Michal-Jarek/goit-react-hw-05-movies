@@ -6,6 +6,9 @@ import { MovieDetailsPage } from '../../pages/MoviesPage/MovieDetailsPage/MovieD
 import { Cast } from '../../pages/MoviesPage/MovieDetailsPage/Cast/Cast';
 import { Reviews } from '../../pages/MoviesPage/MovieDetailsPage/Reviews/Reviews';
 
+
+
+
 export const Router = () => (
   <Routes>
     <Route path="/" element={<SharedLayout />}>
@@ -15,7 +18,7 @@ export const Router = () => (
         <Route path="cast" element={<Cast />} />
         <Route path="reviews" element={<Reviews />} />
       </Route>
-      <Route path="*" element={<SharedLayout />} />
+      <Route path="*" element={<HomePage />} />
     </Route>
   </Routes>
 );

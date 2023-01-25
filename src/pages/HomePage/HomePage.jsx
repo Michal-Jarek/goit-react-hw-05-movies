@@ -1,2 +1,2 @@
 
-export const HomePage = () => (<div>DUPA 2 trzy</div>)
+export const HomePage = () => (<div>Homepage</div>);

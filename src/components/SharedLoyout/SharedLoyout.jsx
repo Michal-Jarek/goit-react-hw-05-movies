@@ -1,4 +1,6 @@
+import { Loader } from 'components/Loader/Loader';
 import { Outlet, NavLink } from 'react-router-dom';
+import { Suspense } from 'react';
 import scss from './SharedLoyout.module.scss';
 
 export const SharedLayout = () => (
@@ -23,7 +25,9 @@ export const SharedLayout = () => (
     </header>
     <main>
       <div className={scss.container}>
-        <Outlet />
+        <Suspense fallback={<Loader />}>
+          <Outlet />
+        </Suspense>
       </div>
     </main>
   </>

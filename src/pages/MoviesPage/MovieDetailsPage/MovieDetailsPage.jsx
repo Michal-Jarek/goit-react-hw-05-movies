@@ -1,1 +1,3 @@
-export const MovieDetailsPage = () => <nav>MovieDetailsPage</nav>;
+const MovieDetailsPage = () => <nav>MovieDetailsPage</nav>;
+
+export default MovieDetailsPage;

@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/667.811e56bb.chunk.js","mappings":"0JAEA,UAFmB,kBAAM,uCAAN,C","sources":["pages/MoviesPage/MoviesPage.jsx"],"sourcesContent":["const MoviesPage = () => <nav>MoviesPage</nav>;\n\nexport default MoviesPage;\n"],"names":[],"sourceRoot":""}

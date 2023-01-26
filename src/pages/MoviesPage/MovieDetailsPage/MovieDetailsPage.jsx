@@ -1,16 +1,15 @@
-import { lazy, Suspense } from 'react';
-import { Loader } from 'components/Loader/Loader';
+import MovieDetails from 'components/MovieDetails/MovieDetails';
 
-const MovieDetails = lazy(() =>
-  import('../../../components/MovieDetails/MovieDetails')
-);
+import scss from './MovieDetailsPage.module.scss';
+
+
 
 const MovieDetailsPage = () => {
   return (
-    <div>
-      <Suspense fallback={<Loader />}>
+    <div className={scss.card}>
+
         <MovieDetails />
-      </Suspense>
+
     </div>
   );
 };

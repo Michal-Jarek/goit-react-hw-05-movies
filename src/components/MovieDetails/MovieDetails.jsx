@@ -21,15 +21,31 @@ const MovieDetails = () => {
     };
     fetch();
     return () => setMovie(null);
+    // eslint-disable-next-line
   }, []);
 
   console.log(movie);
   if (movie) {
-    const { poster_path: src, title: alt } = movie;
+    const {
+      poster_path: src,
+      title,
+      release_date,
+      vote_average,
+        overview,
+      genres
+    } = movie;
     return (
       <>
         <div>
-          <img src={`https://image.tmdb.org/t/p/w500${src}`} alt={alt} />
+          <img src={`https://image.tmdb.org/t/p/w500${src}`} alt={title} />
+        </div>
+        <div>
+          <h1>{`${title} (${release_date.slice(0, 4)})`}</h1>
+          <span>User Score: {Math.round(vote_average * 10)}%</span>
+          <h2>Overview</h2>
+          <span>{overview}</span>
+                <h3>Genres</h3>
+                <span>{ genres.map(genre => `${genre.name}, `)}</span>
         </div>
       </>
     );

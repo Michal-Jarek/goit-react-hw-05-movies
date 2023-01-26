@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { fetchTrending } from 'utils/api/fetchMovie';
 
-import scss from './TrendingToday.module.scss';
+//import scss from './TrendingToday.module.scss';
 
 const TrendingToday = () => {
   const [trendMovieList, setTrendMovieList] = useState([]);

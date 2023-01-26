@@ -3,7 +3,7 @@ import scss from './HomePage.module.scss';
 
 const HomePage = () => (
   <div className={scss.homepage}>
-    {/* <TrendingToday /> */}
+    <TrendingToday />
   </div>
 );
 export default HomePage;

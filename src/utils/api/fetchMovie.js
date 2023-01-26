@@ -14,7 +14,7 @@ const fetchTrending = async () =>
       `${trendingToday}${apiKey}`
     );
   //  console.log(response.data.results);
-    return response.data.results;
+    return response.data.response;
     }
 
 

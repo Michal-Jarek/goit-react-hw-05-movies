@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/814.691d2223.chunk.css","mappings":"AAAA,8BACE","sources":["pages/MoviesPage/MovieDetailsPage/MovieDetailsPage.module.scss"],"sourcesContent":[".card {\n  display: flex;\n}\n"],"names":[],"sourceRoot":""}

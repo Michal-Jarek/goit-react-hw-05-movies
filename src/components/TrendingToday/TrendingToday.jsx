@@ -7,18 +7,24 @@ const TrendingToday = () => {
   const [trendMovieList, setTrendMovieList] = useState([]);
 
   useEffect(() => {
-    if (trendMovieList.length === 0) {
-      fetchTrending().then();
-    }
+    const fetchTrendMovieList = async () => {
+      try {
+        const response = await fetchTrending();
+        setTrendMovieList(response);
+      } catch (e) {
+        console.log(e);
+      }
+    };
+    if (trendMovieList.length === 0) fetchTrendMovieList();
   }, [trendMovieList]);
 
-  console.log(trendMovieList);
-
-  return (
-    <>
-      <h2>Trending today</h2>
-      <ul></ul>
-    </>
-  );
+  if (trendMovieList.length !== 0)
+    console.log(trendMovieList);
+    return (
+      <>
+        <h2>Trending today</h2>
+        <ul></ul>
+      </>
+    );
 };
 export { TrendingToday };

@@ -1,1 +1,3 @@
-export const Cast = () => <nav>Cast</nav>;
+ const Cast = () => <nav>Cast</nav>;
+
+export default Cast;

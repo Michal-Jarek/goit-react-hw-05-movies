@@ -27,7 +27,7 @@ const TrendingToday = () => {
         <ul>
           {trendMovieList.map(({ original_title, id }) => (
             <li key={id}>
-              <NavLink to={`movies/${id}`}>{original_title}</NavLink>{' '}
+              <NavLink to={`movies/movie?id=${id}`}>{original_title}</NavLink>
             </li>
           ))}
         </ul>

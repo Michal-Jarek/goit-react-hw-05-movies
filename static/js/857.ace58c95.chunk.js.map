@@ -1,1 +1,0 @@
-{"version":3,"file":"static/js/857.ace58c95.chunk.js","mappings":"gMAAaA,EAAU,kBAAM,oCAAN,C","sources":["pages/MoviesPage/MovieDetailsPage/Reviews/Reviews.jsx"],"sourcesContent":["export const Reviews = () => <nav>Reviews</nav>;\n"],"names":["Reviews"],"sourceRoot":""}

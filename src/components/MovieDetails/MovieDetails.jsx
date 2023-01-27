@@ -10,7 +10,7 @@ const MovieDetails = ({ filmId }) => {
   useEffect(() => {
     const fetch = async () => {
       try {
-        console.log('w fetch');
+        console.log('w fetch reviews');
         const response = await fetchMovie(filmId);
         setMovie(response);
       } catch (e) {

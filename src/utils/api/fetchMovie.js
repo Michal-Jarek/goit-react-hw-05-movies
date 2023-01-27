@@ -18,4 +18,10 @@ const fetchMovie = async id => {
   return response.data;
 };
 
-export { fetchTrending, fetchMovie };
+const fetchReviews = async id => {
+  const response = await instance.get(`movie/${id}/reviews${apiKey}`);
+  if (response.data.results.length === 0) return null;
+  return response.data.results;
+};
+
+export { fetchTrending, fetchMovie, fetchReviews };

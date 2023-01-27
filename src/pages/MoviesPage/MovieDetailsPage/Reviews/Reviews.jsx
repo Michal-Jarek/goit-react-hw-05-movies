@@ -1,11 +1,30 @@
-import { useLocation, useSearchParams } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
+import { fetchReviews } from 'utils/api/fetchMovie';
 
 const Reviews = () => {
-  const id = useLocation();
-  
-  console.log(id.state);
+  // eslint-disable-next-line
+  const [id, setId] = useSearchParams();
+  const [reviews, setReviews] = useState(null);
+  let localId = id.get('id');
 
-  return (<nav>Reviews</nav>);
+  useEffect(() => {
+    const fetch = async () => {
+      try {
+        console.log('w fetch reviews');
+        const response = await fetchReviews(localId);
+        setReviews(response);
+      } catch (e) {
+        console.log(e);
+      }
+    };
+    fetch();
+    console.log(reviews);
+    return () => setReviews(null);
+    // eslint-disable-next-line
+  }, []);
+
+  return <nav>Reviews</nav>;
 };
 
 export default Reviews;

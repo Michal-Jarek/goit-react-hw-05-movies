@@ -23,5 +23,10 @@ const fetchReviews = async id => {
   if (response.data.results.length === 0) return null;
   return response.data.results;
 };
+const fetchCasts = async id => {
+  const response = await instance.get(`movie/${id}/credits${apiKey}`);
+  if (response.data.cast.length === 0) return null;
+  return response.data.cast;
+};
 
-export { fetchTrending, fetchMovie, fetchReviews };
+export { fetchTrending, fetchMovie, fetchReviews, fetchCasts };

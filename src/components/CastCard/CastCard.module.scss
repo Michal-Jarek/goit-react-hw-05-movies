@@ -1,0 +1,9 @@
+.cast_list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  &__item {
+    max-width: calc((100% / 5) - 10px);
+    margin-bottom: 20px;
+  }
+}

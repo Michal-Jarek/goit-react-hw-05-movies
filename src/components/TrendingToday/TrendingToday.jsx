@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import { fetchTrending } from 'utils/api/fetchMovie';
 
 //import scss from './TrendingToday.module.scss';
 
 const TrendingToday = () => {
   const [trendMovieList, setTrendMovieList] = useState([]);
+  const location = useLocation();
 
   useEffect(() => {
     const fetchTrendMovieList = async () => {
@@ -27,7 +28,9 @@ const TrendingToday = () => {
         <ul>
           {trendMovieList.map(({ original_title, id }) => (
             <li key={id}>
-              <NavLink to={`movies/movie?id=${id}`}>{original_title}</NavLink>
+              <NavLink to={`movies/movie?id=${id}`} state={{ from: location }}>
+                {original_title}
+              </NavLink>
             </li>
           ))}
         </ul>

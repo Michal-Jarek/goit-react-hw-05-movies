@@ -36,7 +36,7 @@ const MovieDetails = ({ filmId }) => {
           <div>
             <img src={`https://image.tmdb.org/t/p/w500${src}`} alt={title} />
           </div>
-          <div>
+          <div className={scss.description}>
             <h1>{`${title} (${release_date.slice(0, 4)})`}</h1>
             <span>User Score: {Math.round(vote_average * 10)}%</span>
             <h2>Overview</h2>

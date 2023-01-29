@@ -5,7 +5,7 @@ import { fetchCasts } from 'utils/api/fetchMovie';
 
 const Cast = () => {
   // eslint-disable-next-line
-  const [getId, setGetId] = useSearchParams();
+  const [getId] = useSearchParams();
   const [casts, setCasts] = useState(false);
   // eslint-disable-next-line
   const id = getId.get('id');
@@ -13,7 +13,6 @@ const Cast = () => {
   useEffect(() => {
     const fetch = async () => {
       try {
-        console.log('w fetch reviews');
         const response = await fetchCasts(id);
         setCasts(response);
       } catch (e) {
@@ -25,7 +24,7 @@ const Cast = () => {
     // eslint-disable-next-line
   }, []);
 
-  console.log(casts);
+
 
   if (!casts) return <span>We don't have casts for this movie.</span>;
   return <div> <CastCard array={[...casts]} /></div>;

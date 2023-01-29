@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import scss from './CastCard.module.scss';
 
 export const CastCard = ({ array }) => {
@@ -18,4 +19,8 @@ export const CastCard = ({ array }) => {
       })}
     </ul>
   );
+};
+
+CastCard.propTypes = {
+  array: PropTypes.array,
 };

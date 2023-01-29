@@ -1,7 +1,8 @@
 import { Loader } from 'components/Loader/Loader';
 import { useState, useEffect } from 'react';
-
 import { fetchMovie } from '../../utils/api/fetchMovie';
+
+import PropTypes from 'prop-types';
 import scss from './MovieDetails.module.scss';
 
 const MovieDetails = ({ filmId }) => {
@@ -49,6 +50,10 @@ const MovieDetails = ({ filmId }) => {
     );
   }
   return <Loader />;
+};
+
+MovieDetails.propTypes = {
+  filmId: PropTypes.string,
 };
 
 export default MovieDetails;

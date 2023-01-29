@@ -1,7 +1,6 @@
-
+import PropTypes from 'prop-types';
 
 export const ReviewsCard = ({ array }) => {
-
   return (
     <ul>
       {array.map(({ author, content, id }) => (
@@ -12,4 +11,7 @@ export const ReviewsCard = ({ array }) => {
       ))}
     </ul>
   );
+};
+ReviewsCard.propTypes = {
+  array: PropTypes.array,
 };

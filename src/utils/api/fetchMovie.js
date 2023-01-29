@@ -29,4 +29,18 @@ const fetchCasts = async id => {
   return response.data.cast;
 };
 
-export { fetchTrending, fetchMovie, fetchReviews, fetchCasts };
+const fetchMovieByTitle = async title => {
+  const response = await instance.get(
+    `search/movie${apiKey}&query=${title}&language=en-US&page=1&include_adult=true`
+  );
+  if (response.data.results === 0) return null;
+  return response.data.results;
+};
+
+export {
+  fetchTrending,
+  fetchMovie,
+  fetchReviews,
+  fetchCasts,
+  fetchMovieByTitle,
+};

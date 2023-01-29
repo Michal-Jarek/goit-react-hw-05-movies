@@ -10,18 +10,19 @@ import {
 
 import scss from './MovieDetailsPage.module.scss';
 
+let backLinkHref = '/movies';
+
 const MovieDetailsPage = () => {
-  // eslint-disable-next-line
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams] = useSearchParams();
   const [filmId, setFilmId] = useState(null);
   const location = useLocation();
-  const backLinkHref = location.state?.from ?? '/movies';
+  if (location.state?.from) backLinkHref = location.state?.from;
 
   useEffect(() => {
     setFilmId(searchParams.get('id'));
     // eslint-disable-next-line
   }, []);
-  console.log(filmId);
+
   if (filmId)
     return (
       <div>
